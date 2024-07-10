@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../static/css/create-post.css">
+    <title>forum</title>
+</head>
+
+<body>
+        <div class="create-post">
+            <p>Create Post</p>
+        </div>
+        <form method="post" action="/submit_post">
+
+            <div class="form-title">
+                <label for="Title">Insert title</label>
+
+                <input type="text" class="title" name="Title" value="" required />
+            </div>
+
+            <div class="form-text">
+                <label for="text">Insert Text</label>
+
+                <input type="text" class="text" id="text" name="text" required>
+            </div>
+
+            <div class="form-categories">
+                <label for="Categories">Insert One or more Categories</label>
+                <select name="Categories" class="categories-select">
+                    <option value="">
+                    {{range .Categories}}
+                    <option value={{.}} name={{.}}>{{. }}</option>
+                    {{ end }}
+                    </option>
+                </select>
+                <select name="Categories2" class="categories-select">
+                    <option value="">
+                    {{range .Categories}}
+                    <option value={{.}} name={{.}}>{{. }}</option>
+                    {{ end }}
+                    </option>
+                </select>
+            </div>
+
+            <input class="submit" type="submit" value="submit">
+
+        </form>
+
+</body>
+
+</html>

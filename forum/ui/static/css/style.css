@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(38, 7, 1);
+}
+
+body::before {
+    content: "";
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9a/512x512_Dissolve_Noise_Texture.png');
+    opacity: 0.08;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    position: fixed;
+    z-index: 100;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    animation: whitenoise 0.06s linear infinite;
+}
+
+@keyframes whitenoise {
+    0% {
+        translate: 0px -100px;
+    }
+
+    100% {
+        translate: -100px;
+    }
+}
+
+@keyframes text-slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.bg-angle {
+    z-index: -9999999999999021110;
+    background: url();
+    translate: 0 -60vh;
+    position: fixed;
+    rotate: -7deg;
+    transform: skewX(-10deg);
+}
+
+.text-bg {
+    white-space: nowrap;
+}
+
+.text-title {
+    display: inline-block;
+    animation: 15s text-slide infinite linear;
+}
+
+@keyframes text-slide2 {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.text-bg2 {
+    white-space: nowrap;
+}
+
+.text-title2 {
+    display: inline-block;
+    animation: 15s text-slide2 infinite linear;
+}
+
+p {
+    font-size: 280px;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(81, 30, 49);
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 0.75;
+    min-width: auto;
+    font-weight: 800;
+}
+
+a {
+    font-size: xx-large;
+    text-decoration: none;
+    color: rgb(255, 224, 215);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+}
+
+.con {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* derriere du bouton */
+
+.myButton {
+    border: solid 1px white;
+    background: darken(blue, 5%);
+    color: darken(blue, 60%);
+    position: relative;
+    transform: skewX(20deg);
+    height: 40px;
+    width: 100px;
+
+    /* button blanc, + login text */
+    &::before {
+        height: 40px;
+        width: 100px;
+        border: solid 1px rgb(255, 224, 215);
+        content: attr(data-label);
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: -0.7rem;
+        left: 0.5rem;
+        z-index: -1;
+        transition: all 0.5s ease;
+    }
+
+    &:hover {
+        &::before {
+            top: -2px;
+            left: -2px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.myButton1 {
+    border: solid 1px rgb(255, 224, 215);
+    background: darken (red, 5%);
+    color: darken(red, 60%);
+    position: relative;
+    transform: skewX(20deg);
+    height: 40px;
+    width: 200px;
+
+    &::before {
+        height: 40px;
+        width: 200px;
+        border: solid 1px rgb(255, 224, 215);
+        content: attr(data-label);
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: -0.7rem;
+        left: 0.5rem;
+        z-index: -1;
+        transition: all 0.5s ease;
+    }
+
+    &:hover {
+        &::before {
+            top: -2px;
+            left: -2px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.myButton2 {
+    border: solid 1px rgb(255, 224, 215);
+    background: darken (red, 5%);
+    color: darken(red, 60%);
+    position: relative;
+    transform: skewX(20deg);
+    height: 40px;
+    width: 200px;
+
+    &::before {
+        height: 40px;
+        width: 200px;
+        border: solid 1px rgb(255, 224, 215);
+        content: attr(data-label);
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: -0.7rem;
+        left: 0.5rem;
+        z-index: -1;
+        transition: all 0.5s ease;
+    }
+
+    &:hover {
+        &::before {
+            top: -2px;
+            left: -2px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.center-post {
+    position: relative;
+}
+
+.post-content {
+    margin-top: 9%;
+}
+
+.post {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    border: solid 0.5px rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.674);
+    height: 200px;
+    width: 700px;
+}
+
+.titre {
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+
+}
+
+.username {
+    font-size: medium;
+    display: flex;
+    justify-content: left;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 0;
+    font-size: small;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+
+.contenu {
+    width: 100%;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.like-dislike-button {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+.nb-comments {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+}
+
+.filtering {
+    display: flex;
+    position: absolute;
+    top: 50%;
+}
+
+.filter-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories-filter {
+    text-align: center;
+    font-size:smaller;
+    width: 250px;
+    height: auto;
+}
+
+.like-filter {
+    text-align: center;
+    font-size:smaller;
+    width: 250px;
+    height: auto;
+}
+
+.date-filter {
+    text-align: center;
+    font-size:smaller;
+    width: 250px;
+    height: auto;
+}
+
+/* .deconnection {
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 75px;
+    height: auto;
+}
+
+.disconnection {
+    width: auto;
+    border-radius: 100% ;
+    height: 75px;
+} */
+
+.user-creation {
+    width: 250px;
+    height:250px;
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    bottom: 0;
+    position: absolute;
+}

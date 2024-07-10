@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(38, 7, 1);
+}
+
+p {
+    font-size: 80px;
+    -webkit-text-stroke: 2px beige;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.write-comments {
+    display: flex;
+    justify-content: center;
+}
+
+.comments {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.input-comment {
+    color: black;
+    font-style: italic;
+    display: block;
+    font-weight: 800;
+    margin: 5px auto;
+    width: 250px;
+    height: 50px;
+}

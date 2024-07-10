@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../static/css/create-comments.css">
+    <title>forum</title>
+</head>
+
+<body>
+    <div class="write-comments">
+        <p>Write a Comments</p>
+    </div>
+    <div class="comments-create">
+        <form method="post" action="/submit-comment">
+            <input type="text" class="comments" name="comment" required />
+
+            <button name="id-post" class="input-comment" type="submit" value="{{.Id}}">Add comment</button>
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>

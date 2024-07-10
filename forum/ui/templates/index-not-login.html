@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <title>forum</title>
+</head>
+
+<body>
+
+    <div class="banniere">
+        <h1>Forum</h1>
+        <div class="link">
+            <a class="login" href="/login">
+                <h4>Login</h4>
+            </a>
+            <a class="register" href="./register">
+                <h4>Register</h4>
+            </a>
+            <a class="create-post-style" href="./create-post">
+                <h4>Create Post</h4>
+            </a>
+        </div>
+    </div>
+
+    <form method="post" action="/index">
+        <div class="filter-content">
+            <select name="filter" id="filter-select">
+                <option value="All" name="All">All</option>
+                {{ range .Categories}}
+                <option value={{.}} name={{.}}>{{. }}</option>
+                {{ end }}
+            </select>
+            <select name="like-filter">
+                <option value="All">All</option>
+                <option value="liked_post">Liked post</option>
+                <option value="most_liked">Most liked</option>
+            </select>
+            <select name="created-post-filter">
+                <option value="All">All</option>
+                <option value="most_recent" nam>Most Recent</option>
+                <option value="mostcomments_old">Ancien de bz tah les fous</option>
+            </select>
+
+            <button class="enzo">bouton</button>
+    </form>
+    </div>
+
+
+    <div class="post-content">
+        {{if .Posts}}
+        {{range .Posts}}
+        <div class="post">
+            <div class="titre">
+                <h2>{{.Title}}</h2>
+            </div>
+            <div class="username">
+                <p>{{.Username}}</p>
+            </div>
+            <div class="categories-date">
+                <p>{{.Categories}}</p>
+                <p>{{.Date}}</p>
+            </div>
+            <div class="contenu">
+                <h3>{{.Content}}</h3>
+            </div>
+            <div class="commentsNumb">
+                <form method="POST" action="/register">
+                    <button class="like" value={{.Id}} name="idpost">Like :{{.Like}}</button>
+                </form>
+                <form method="POST" action="/register">
+                    <button class="dislike" value={{.Id}} name="idpost2">Dislike :{{.Dislike}}</button>
+                </form>
+                <form method="POST" action="/register">
+                    <button class="comments" value={{.Id}} name="comments">Comments: {{.CommentsNumb}}</button>
+                </form>
+                <form method="POST" action="/register">
+                    <button class="create-comments-style" value={{.Id}} name="id-post">create-comments</button>
+                </form>
+            </div>
+        </div>
+        {{end}}
+        {{end}}
+    </div>
+
+
+</body>
+
+</html> -->

@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(38, 7, 1);
+}
+
+body::before {
+    content: "";
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9a/512x512_Dissolve_Noise_Texture.png');
+    opacity: 0.08;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    position: fixed;
+    z-index: 100;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    animation: whitenoise 0.06s linear infinite;
+}
+
+@keyframes whitenoise {
+    0% {
+        translate: 0px -100px;
+    }
+
+    100% {
+        translate: -100px;
+    }
+}
+
+@keyframes text-slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.bg-angle {
+    z-index: -9999999999999;
+    background: url();
+    translate: 0 -60vh;
+    position: fixed;
+    rotate: -7deg;
+    transform: skewX(-10deg);
+}
+
+.text-bg {
+    white-space: nowrap;
+}
+
+.text-title {
+    display: inline-block;
+    animation: 15s text-slide infinite linear;
+}
+
+@keyframes text-slide2 {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.text-bg2 {
+    white-space: nowrap;
+}
+
+.text-title2 {
+    display: inline-block;
+    animation: 15s text-slide2 infinite linear;
+}
+
+p {
+    font-size: 280px;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(81, 30, 49);
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 0.75;
+    min-width: auto;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 100px;
+    color: aliceblue;
+    -webkit-text-stroke: 1.7px brown;
+    font-style: oblique;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+
+.email-group {
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-style: oblique;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.email {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.user-group {
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-style: oblique;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.user {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.password-group {
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-style: oblique;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.password {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.submit {
+    color: black;
+    font-style: oblique;
+    display: block;
+    font-weight: 800;
+    margin: 5px auto;
+    width: 75px;
+    height: 50px;
+}
